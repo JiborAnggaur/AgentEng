@@ -39,8 +39,14 @@
       <version>${jackson.version}</version>
     </dependency>
 
+    <!-- Задание указывает net.sf.jacob-project:jacob:1.20, но эта координата не
+         резолвится из Maven Central — там для net.sf.jacob-project есть только 1.14.3
+         (проверено: https://repo.maven.apache.org/maven2/net/sf/jacob-project/jacob/).
+         xyz.cofe:jacob:1.20 — тот же апстримный релиз 1.20, перезалитый в Central:
+         те же классы com.jacob.com.*/com.jacob.activeX.*, тот же jacob-1.20-x64.dll,
+         что и предустановленная на стенде нативная библиотека (см. §1 задания). -->
     <dependency>
-      <groupId>net.sf.jacob-project</groupId>
+      <groupId>xyz.cofe</groupId>
       <artifactId>jacob</artifactId>
       <version>1.20</version>
     </dependency>
@@ -93,7 +99,7 @@
                so keeping jacob off the test runtime classpath keeps `mvn test` green
                on any machine, matching the hint in the assignment (mirrors "Kolya"). -->
           <classpathDependencyExcludes>
-            <classpathDependencyExclude>net.sf.jacob-project:jacob</classpathDependencyExclude>
+            <classpathDependencyExclude>xyz.cofe:jacob</classpathDependencyExclude>
           </classpathDependencyExcludes>
         </configuration>
       </plugin>
