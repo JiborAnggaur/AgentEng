@@ -81,7 +81,7 @@ public class MailAgentTest {
         Clock clock = Clock.fixed(Instant.parse("2026-08-13T09:00:00Z"), ZoneOffset.UTC);
 
         ObjectNode toolInput = Json.MAPPER.createObjectNode();
-        toolInput.put("query", "");
+        toolInput.put("query", "Иван");
 
         MockLlmClient llmClient = new MockLlmClient(Arrays.asList(
                 new ChatResponse(Collections.singletonList(
