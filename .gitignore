@@ -1,0 +1,23 @@
+target/
+*.class
+*.log
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# runtime state produced by the running agent — not part of the deliverable
+/data/*
+!/data/.gitkeep
+
+# Maven Wrapper auto-downloads this jar from Maven Central on first run
+# (see the extension comment in mvnw/mvnw.cmd) — not checked in as binary data.
+.mvn/wrapper/maven-wrapper.jar
+
+# never commit real secrets — the app only reads keys from OS env vars, never from a file,
+# but keep this rule in place as a guardrail against accidental local .env usage
+.env

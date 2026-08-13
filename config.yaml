@@ -1,0 +1,20 @@
+llm:
+  endpoint: https://api.anthropic.com/v1/messages
+  model: claude-sonnet-5
+  apiKeyEnv: ANTHROPIC_API_KEY
+  timeoutMs: 30000
+
+agent:
+  maxSteps: 6
+
+store:
+  path: ./data
+
+mail:
+  pollSeconds: 30
+  profile: Outlook
+  folder: Inbox
+
+audit:
+  path: ./data/audit.log
+  hmacKeyEnv: AUDIT_HMAC_KEY
